@@ -6,8 +6,11 @@ import { IconHome, IconStack3, IconMessage2, IconFileCv } from "@tabler/icons-re
 export default function Sidebar() {
   const [opened, { toggle }] = useDisclosure();
   return (
-    <div className="SidebarMain">
-      <Popover width={148}>
+    <div
+      className="SidebarMain"
+      style={{ zIndex: 99 }}
+    >
+      <Popover width={150}>
         <Popover.Target>
           <Burger
             opened={opened}

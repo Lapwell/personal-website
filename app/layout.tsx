@@ -1,5 +1,6 @@
 import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import Sidebar from "./components/sidebar";
 
 export const metadata = {
   title: "The Bron Zone",
@@ -13,7 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ColorSchemeScript />
       </head>
       <body suppressHydrationWarning={true}>
-        <MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
+        <MantineProvider defaultColorScheme="dark">
+          <Sidebar />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
