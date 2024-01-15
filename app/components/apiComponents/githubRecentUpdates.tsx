@@ -1,5 +1,5 @@
 import { Octokit, App } from "octokit";
 
 export default function GithubRecentUpdate(URL: string) {
-    const octokit = new Octokit({auth:})
+    const octokit = new Octokit({ auth: process.env.GIT_AUTH });
 }
